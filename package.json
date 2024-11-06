@@ -1,0 +1,14 @@
+{
+  "name": "filament-tracker",
+  "version": "1.0.0",
+  "description": "Tracks fillament usage.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "JSDALE",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
