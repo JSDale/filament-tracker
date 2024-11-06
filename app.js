@@ -20,6 +20,7 @@ App.use(Express.static(Path.join(__dirname, 'public')));
 
 const MainController = require("./controllers/main");
 App.get('/', MainController.main);
+App.get('/filament', MainController.remainder);
 
 App.listen(port, () =>
 {
