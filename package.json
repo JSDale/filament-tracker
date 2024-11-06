@@ -1,10 +1,12 @@
 {
   "name": "filament-tracker",
   "version": "1.0.0",
-  "description": "Tracks fillament usage.",
+  "description": "Tracks filament usage.",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=pub node app.js",
+    "dev": "NODE_ENV=dev node app.js"
   },
   "author": "JSDALE",
   "license": "ISC",
