@@ -1,6 +1,6 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` || '.env.pub'});
 const Express = require('express');
-const app = Express();
+const App = Express();
 const Path = require('path');
 const
 {
@@ -13,14 +13,15 @@ if (typeof port == 'undefined')
     port = 3001;
 }
 
-app.use(express.static(Path.join(__dirname, 'views')));
-app.use(express.static(Path.join(__dirname, 'public')));
+App.set("view engine", "ejs");
+
+App.use(Express.static(Path.join(__dirname, 'views')));
+App.use(Express.static(Path.join(__dirname, 'public')));
 
 const MainController = require("./controllers/main");
-app.set("view engine", "ejs");
-app.get('/', MainController.main);
+App.get('/', MainController.main);
 
-app.listen(port, () =>
+App.listen(port, () =>
 {
     console.debug("starting on: " + port);
 });
