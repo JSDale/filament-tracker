@@ -15,7 +15,7 @@ exports.remainder = async (_, res) =>
         }
 
         const FilamentData = JSON.parse(data);
-        console.log(FilamentData);
+        //console.log(FilamentData);
         res.json(FilamentData);
       });
 }
