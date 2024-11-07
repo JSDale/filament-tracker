@@ -17,10 +17,12 @@ App.set("view engine", "ejs");
 
 App.use(Express.static(Path.join(__dirname, 'views')));
 App.use(Express.static(Path.join(__dirname, 'public')));
+App.use(Express.json());
 
 const MainController = require("./controllers/main");
 App.get('/', MainController.main);
 App.get('/filament', MainController.remainder);
+App.put('/used/', MainController.addUsage);
 
 App.listen(port, () =>
 {
